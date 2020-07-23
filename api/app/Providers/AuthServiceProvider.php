@@ -31,8 +31,8 @@ class AuthServiceProvider extends ServiceProvider
         // the User instance via an API token or any other method necessary.
 
         $this->app['auth']->viaRequest('api', function ($request) {
-            if ($nickname = $request->input('nickname')) {
-                return Player::where('nickname', $nickname)->first();
+            if ($nickname = $request->get('nickname')) {
+                return (new Player)->where('nickname', $nickname)->first();
             }
 
             return null;
