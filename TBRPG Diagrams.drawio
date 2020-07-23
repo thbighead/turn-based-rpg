@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" modified="2020-07-23T13:37:04.637Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="Bz1Vj82rYJd-rFYGSS62" version="13.5.1" type="github" pages="2">
+  <diagram id="QUwYEdzhh4WQ27PpGiZF" name="ERD">
+    <mxGraphModel dx="1021" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-36" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;" edge="1" parent="1" source="5qfmmoKCg5gF3HDl1x36-28" target="5qfmmoKCg5gF3HDl1x36-26">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="-46" y="270" as="sourcePoint" />
+            <mxPoint x="54" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-37" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;endFill=1;" edge="1" parent="1" source="5qfmmoKCg5gF3HDl1x36-26" target="5qfmmoKCg5gF3HDl1x36-32">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="70" y="190" as="sourcePoint" />
+            <mxPoint x="74" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="150" y="110" />
+              <mxPoint x="150" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-39" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERzeroToOne;startFill=1;" edge="1" parent="1" source="5qfmmoKCg5gF3HDl1x36-28" target="5qfmmoKCg5gF3HDl1x36-30">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="23.999999999999996" y="410" as="sourcePoint" />
+            <mxPoint x="124" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="684" y="110" />
+              <mxPoint x="684" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-40" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;" edge="1" parent="1" source="5qfmmoKCg5gF3HDl1x36-30" target="5qfmmoKCg5gF3HDl1x36-32">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="144" y="360" as="sourcePoint" />
+            <mxPoint x="244" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-42" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERzeroToOne;startFill=1;" edge="1" parent="1" source="5qfmmoKCg5gF3HDl1x36-30" target="5qfmmoKCg5gF3HDl1x36-34">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="504" y="510" as="sourcePoint" />
+            <mxPoint x="634" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="544" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-26" value="Game" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="214" y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-27" value="+_id&#xa;+created_at&#xa;+updated_at" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-26">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-28" value="Player" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="464" y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-29" value="+_id&#xa;+name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-28">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-30" value="Character" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="464" y="210" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-31" value="+_id&#xa;+hit_points&#xa;+strength&#xa;+defense&#xa;+agility" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-30">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-32" value="Battle" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="214" y="210" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-33" value="+_id&#xa;+finished&#xa;+turn&#xa;+initiatives&#xa;+damages" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-32">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-34" value="Equipment" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="214" y="370" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-35" value="+_id&#xa;+bonus_attack&#xa;+bonus_defense&#xa;+dice_faces&#xa;+is_equipped" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-34">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wlv48fsyCahMGWaBArmx" name="Page-2">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="_x80eorYC4rf50iY-SWX-0" />
+        <mxCell id="_x80eorYC4rf50iY-SWX-1" parent="_x80eorYC4rf50iY-SWX-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
