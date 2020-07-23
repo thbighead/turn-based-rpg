@@ -12,4 +12,4 @@ A **T**urn-**B**ased **RPG** system made with an API connected to a cloud MongoD
 
 ### Diagrams
 
-All system diagrams can be found [here] (all made with draw.io)
+All system diagrams can be found [here](https://viewer.diagrams.net/?page-id=wlv48fsyCahMGWaBArmx&title=TBRPG%20Diagrams.drawio#R%3Cmxfile%3E%3Cdiagram%20id%3D%22QUwYEdzhh4WQ27PpGiZF%22%20name%3D%22Page-1%22%3EdZE9D4IwEIZ%2FTXdoFXFGxMWJwbmhJ21SOFJqQH%2B9kFKxQZfm%2Btx734RlzVgY3skrCtCERmIk7EQoTZN0emfwdGC3jxyojRIOxSso1QsW6GUPJaAPhBZRW9WFsMK2hcoGjBuDQyi7ow6rdryGDSgrrrf0poSVy1j0sPILqFr6ynFydJ6Ge%2FEySS%2B5wOELsZywzCBaZzVjBnrend%2BLizv%2F8X4aM9DaHwGTseaePsGBWP4G%3C%2Fdiagram%3E%3Cdiagram%20id%3D%22wlv48fsyCahMGWaBArmx%22%20name%3D%22Page-2%22%3ElZFND4IwDIZ%2FzY4kwEDxjF8XTxyUk1lYgSWDkjkj%2BuuFjIkLF70s3bO37d6W0LTpD4p19Qk5SBL6vCd0S8IwWSXDOYKnAVHsG1ApwQ0KZpCJF0zQyu6Cw80RakSpRefCAtsWCu0wphQ%2BXFmJ0u3asQoWICuYXNKz4LqebIXrmR9BVLXtHKw25qVhVjw5udWM4%2BML0R2hqULUJmr6FOQ4OzuXa5%2F4gCpPI1XGvsi97HzxTLH9PykfCwpa%2FWvpIZi%2FNlyc%2FdLdGw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E) (all made with [draw.io](https://app.diagrams.net/)).
