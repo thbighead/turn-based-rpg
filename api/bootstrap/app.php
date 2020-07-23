@@ -23,7 +23,7 @@ $app = new Laravel\Lumen\Application(
 
 // $app->withFacades();
 
-// $app->withEloquent();
+ $app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ $app->singleton(
 |--------------------------------------------------------------------------
 |
 | Now we will register the "app" configuration file. If the file exists in
-| your configuration driectory it will be loaded; otherwise, we'll load
+| your configuration directory it will be loaded; otherwise, we'll load
 | the default version. You may register other files below as needed.
 |
 */
@@ -92,6 +92,7 @@ $app->configure('app');
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
