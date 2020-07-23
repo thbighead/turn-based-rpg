@@ -17,3 +17,8 @@ use Laravel\Lumen\Routing\Router;
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->post('login', 'GameController@login');
+
+$router->post('play', ['middleware' => 'auth', 'uses' => 'GameController@play']);
+$router->post('battle', ['middleware' => 'auth', 'uses' => 'GameController@battle']);
