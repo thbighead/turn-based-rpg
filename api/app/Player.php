@@ -18,15 +18,16 @@ class Player extends Model implements AuthenticatableContract, AuthorizableContr
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'nickname',
     ];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-    ];
+    public function character()
+    {
+        return $this->embedsOne(Character::class);
+    }
+
+    public function games()
+    {
+        return $this->hasMany(Game::class);
+    }
 }
