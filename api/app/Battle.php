@@ -22,9 +22,4 @@ class Battle extends Model
     {
         return $this->embedsOne(Character::class);
     }
-
-    public function game()
-    {
-        return $this->belongsTo(Game::class);
-    }
 }

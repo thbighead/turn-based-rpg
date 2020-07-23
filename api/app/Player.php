@@ -8,6 +8,13 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Jenssegers\Mongodb\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 
+/**
+ * Class Player
+ *
+ * @package App
+ *
+ * @property string $nickname
+ */
 class Player extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
@@ -20,6 +27,8 @@ class Player extends Model implements AuthenticatableContract, AuthorizableContr
     protected $fillable = [
         'nickname',
     ];
+
+    protected $dates = ['created_at', 'updated_at'];
 
     public function character()
     {
