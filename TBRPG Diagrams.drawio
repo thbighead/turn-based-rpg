@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-07-23T13:36:36.730Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="iIOAvKKRDOpGfKCXD9v-" version="13.5.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-07-23T13:37:04.637Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="Bz1Vj82rYJd-rFYGSS62" version="13.5.1" type="github" pages="2">
   <diagram id="QUwYEdzhh4WQ27PpGiZF" name="ERD">
     <mxGraphModel dx="1021" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -54,7 +54,7 @@
         <mxCell id="5qfmmoKCg5gF3HDl1x36-28" value="Player" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
           <mxGeometry x="464" y="50" width="160" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="5qfmmoKCg5gF3HDl1x36-29" value="+_id&#xa;+name&#xa;+Attribute3" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-28">
+        <mxCell id="5qfmmoKCg5gF3HDl1x36-29" value="+_id&#xa;+name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5qfmmoKCg5gF3HDl1x36-28">
           <mxGeometry y="30" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="5qfmmoKCg5gF3HDl1x36-30" value="Character" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
