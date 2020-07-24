@@ -4,7 +4,7 @@ namespace App\Builders\Characters;
 
 use App\Equipment;
 
-interface CharacterBuilder
+interface ICharacterBuilder
 {
     public function build(Equipment $initialEquipment = null);
 }

@@ -34,7 +34,7 @@ class GameController extends Controller
     public function battle(Request $request)
     {
         $this->validate($request, [
-            'game_id' => 'required'
+            'game_id' => 'required|exists:games,_id'
         ]);
 
         $game = $this->gameRepository->find($request->get('game_id'));

@@ -5,7 +5,7 @@ namespace App\Builders\Characters;
 use App\Character;
 use App\Equipment;
 
-class OrcBuilder implements CharacterBuilder
+class OrcBuilder implements ICharacterBuilder
 {
     private $character;
     private $equipment;
@@ -28,7 +28,7 @@ class OrcBuilder implements CharacterBuilder
 
         if ($this->equipment) {
             $this->equipment->setAttribute('is_equipped', true);
-            $this->character->equipment()->save($this->equipment);
+            $this->character->equipment()->associate($this->equipment);
         }
 
         return $this->character;

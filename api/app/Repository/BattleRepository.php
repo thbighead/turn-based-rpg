@@ -3,24 +3,20 @@
 namespace App\Repository;
 
 use App\Battle;
-use App\Builders\Characters\OrcBuilder;
-use App\Builders\Equipments\WoodClubBuilder;
 use App\Game;
 
 class BattleRepository
 {
-    private $enemyBuilder;
+    private $characterRepository;
 
     public function __construct()
     {
-        $this->enemyBuilder = new OrcBuilder((new WoodClubBuilder())->build());
+        $this->characterRepository = new CharacterRepository();
     }
 
     public function createGameBattle(Game $game)
     {
         $battle = new Battle;
-        $enemy = $this->enemyBuilder->build();
-        $battle->character()->associate($enemy);
         $battle->setRawAttributes([
             'finished' => false,
             'turn' => 0,
@@ -33,8 +29,17 @@ class BattleRepository
                 'enemy' => null,
             ],
         ]);
+        $character = $this->characterRepository->createHumanWithLongSword();
+        $enemy = $this->characterRepository->createOrcWithWoodClub();
+        $battle->character()->associate($enemy);
         $battle->save();
         $game->battle()->associate($battle);
+        $player = $game->player;
+        $player->character()->associate($character);
+        $player->save();
+        $game->player()->associate($player);
+        $game->log = "A WILD ORC APPEARS!\nOrc:\"Brace yourself, human, I'm smashing you into peaces!\"\nDefeat the Orc or pay with your life!";
+        $game->save();
 
         return $battle;
     }

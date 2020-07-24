@@ -5,7 +5,7 @@ namespace App\Builders\Characters;
 use App\Character;
 use App\Equipment;
 
-class HumanBuilder implements CharacterBuilder
+class HumanBuilder implements ICharacterBuilder
 {
     private $character;
     private $equipment;
@@ -13,6 +13,7 @@ class HumanBuilder implements CharacterBuilder
     public function __construct(Equipment $initialEquipment = null)
     {
         $this->equipment = $initialEquipment;
+
         $this->character = new Character;
         $this->character->setRawAttributes([
             'race' => 'human',
@@ -28,7 +29,7 @@ class HumanBuilder implements CharacterBuilder
 
         if ($this->equipment) {
             $this->equipment->setAttribute('is_equipped', true);
-            $this->character->equipment()->save($this->equipment);
+            $this->character->equipment()->associate($this->equipment);
         }
 
         return $this->character;

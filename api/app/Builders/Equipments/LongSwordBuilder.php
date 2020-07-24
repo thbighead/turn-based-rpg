@@ -3,12 +3,9 @@
 namespace App\Builders\Equipments;
 
 use App\Equipment;
-use Illuminate\Support\Arr;
 
-class LongSwordBuilder implements EquipmentBuilder
+class LongSwordBuilder extends EquipmentBuilder
 {
-    private $equipment;
-
     public function __construct()
     {
         $this->equipment = new Equipment;
@@ -19,17 +16,5 @@ class LongSwordBuilder implements EquipmentBuilder
             'dice_faces' => 6,
             'is_equipped' => false,
         ]);
-    }
-
-    public function build(array $customized_bonus = [])
-    {
-        $this->equipment->setRawAttributes(Arr::only($customized_bonus, [
-            'name',
-            'bonus_attack',
-            'bonus_defense',
-            'dice_faces',
-        ]));
-
-        return $this->equipment;
     }
 }
