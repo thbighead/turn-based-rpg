@@ -42,6 +42,21 @@ class GameController extends Controller
         return $this->battleRepository->createGameBattle($game);
     }
 
+    public function log(Request $request)
+    {
+        $this->validate($request, [
+            'game_id' => 'required|exists:games,_id'
+        ]);
+
+        $game = $this->gameRepository->find($request->get('game_id'));
+
+        if ($request->header('Accept') === 'application/json') {
+            return response()->json(['full_game_log' => $game->log]);
+        }
+
+        return nl2br($game->log);
+    }
+
     public function login(Request $request)
     {
         $this->validate($request, [

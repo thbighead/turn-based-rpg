@@ -14,6 +14,7 @@ use Laravel\Lumen\Auth\Authorizable;
  * @package App
  *
  * @property string $nickname
+ * @property-read Character $character
  */
 class Player extends Model implements AuthenticatableContract, AuthorizableContract
 {

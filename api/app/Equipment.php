@@ -38,4 +38,6 @@ class Equipment extends Model
         'dice_faces',
         'is_equipped',
     ];
+
+    protected $collection = 'equipments';
 }
