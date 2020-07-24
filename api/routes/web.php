@@ -18,7 +18,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->post('log', 'GameController@log');
 $router->post('login', 'GameController@login');
 
 $router->post('play', ['middleware' => 'auth', 'uses' => 'GameController@play']);
 $router->post('battle', ['middleware' => 'auth', 'uses' => 'GameController@battle']);
+
+$router->post('next_turn', ['middleware' => 'auth', 'uses' => 'BattleController@nextTurn']);
