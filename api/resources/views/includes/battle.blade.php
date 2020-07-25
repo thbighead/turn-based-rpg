@@ -1,11 +1,9 @@
-<article>
-    <section>
-        <span>Player name:</span> <span></span>
+<article id="battle_component" class="hidden">
+    <section id="hit_points">
+        <p><span>Player name:</span> <span id="player_hp"></span>/<span id="max_player_hp"></span></p>
+        <p><span>Orc:</span> <span id="enemy_hp"></span>/<span id="max_enemy_hp"></span></p>
     </section>
     <section>
-        <span>Orc:</span> <span></span>
-    </section>
-    <section>
-        <p></p>
+        <p id="log"></p>
     </section>
 </article>
