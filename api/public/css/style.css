@@ -1,3 +1,14 @@
 .hidden {
     display: none;
 }
+
+.card {
+    border: solid black 1px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#characters {
+    display: flex;
+    justify-content: space-evenly;
+}
