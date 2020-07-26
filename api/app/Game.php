@@ -35,6 +35,8 @@ class Game extends Model
 
     public function over()
     {
+        if (!$this->battle) return false;
+
         return $this->battle->finished;
     }
 }
