@@ -38,3 +38,8 @@ php artisan ide-helper:eloquent
 
 You can just run `php -S localhost:8000 -t public` into your terminal and keeping it opened open your browser and go 
 to http://localhost:8000/.
+
+### API Endpoints
+
+You can check (and test) all API routes using [Insomnia](https://insomnia.rest/download/) and importing 
+Insomnia_date.json file to it.
