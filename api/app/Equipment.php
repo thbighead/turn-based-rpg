@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Services\Dice;
+use Exception;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 /**
@@ -39,6 +40,10 @@ class Equipment extends Model
 
     protected $collection = 'equipments';
 
+    /**
+     * @return mixed
+     * @throws Exception
+     */
     public function getDiceAttribute()
     {
         if (!data_get($this->attributes, 'dice')) {
