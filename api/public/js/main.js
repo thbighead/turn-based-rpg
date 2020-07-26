@@ -70,6 +70,7 @@ var battleNextTurn = function (ajaxSendData, errorBoxElement, buttonElement) {
             var logTextArrayLineByLine = battleLogElement.innerText.split(/\r?\n/);
             battleFightButton.innerText = logTextArrayLineByLine[logTextArrayLineByLine.length - 1].substr(3);
             battleFightButton.disabled = true;
+            battlePlayAgainButton.classList.remove('hidden');
         }
     }).catch(function (responseError) {
         errorBoxElement.textContent = responseError.nickname.reduce(function (finalText, error) {
@@ -175,14 +176,18 @@ battlePlayAgainButton.addEventListener('click', function () {
     errorBoxElement.classList.add('hidden');
     battleLogElement.innerText = '';
     isGameOver = false;
+    isFirstTurn = true;
 
     http.post('/play', {
         nickname: playerName
     }).then(function (response) {
         gameId = response._id;
+        battlePlayAgainButton.classList.add('hidden');
         battlePlayerCardElement.classList.add('hidden');
         battleEnemyCardElement.classList.add('hidden');
         battleCharactersContainerElement.dataset.filled = 'false';
+        battleFightButton.innerText = 'Fight!';
+        battleFightButton.disabled = false;
     }).catch(function (responseError) {
         errorBoxElement.textContent = responseError.nickname.reduce(function (finalText, error) {
             return finalText + error;
