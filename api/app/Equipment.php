@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Services\Dice;
+use Exception;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 /**
@@ -15,15 +16,13 @@ use Jenssegers\Mongodb\Eloquent\Model;
  * @property int $bonus_defense
  * @property int $dice_faces
  * @property bool $is_equipped
+ * @property-read Dice $dice
  */
 class Equipment extends Model
 {
-    public $dice;
-
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->dice = new Dice($this->dice_faces);
     }
 
     /**
@@ -40,4 +39,17 @@ class Equipment extends Model
     ];
 
     protected $collection = 'equipments';
+
+    /**
+     * @return mixed
+     * @throws Exception
+     */
+    public function getDiceAttribute()
+    {
+        if (!data_get($this->attributes, 'dice')) {
+            $this->attributes['dice'] = new Dice($this->dice_faces);
+        }
+
+        return $this->attributes['dice'];
+    }
 }

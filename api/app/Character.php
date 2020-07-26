@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Services\Dice;
+use Exception;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 /**
@@ -20,6 +21,11 @@ class Character extends Model
 {
     private $d20;
 
+    /**
+     * Character constructor.
+     * @param array $attributes
+     * @throws Exception
+     */
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
