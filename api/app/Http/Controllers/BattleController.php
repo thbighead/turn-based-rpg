@@ -39,6 +39,11 @@ class BattleController extends Controller
 
         $game = $this->gameRepository->find($request->get('game_id'));
 
+        if (!$game->battle) return response()->json([
+            'message' => 'Battle hasn\'t began yet',
+            'game' => $game
+        ], 405);
+
         if ($game->over()) return response()->json(['message' => 'Game Over', 'game' => $game]);
 
         $game->appendBattleLog($game->battle->calculateWholeTurn());
