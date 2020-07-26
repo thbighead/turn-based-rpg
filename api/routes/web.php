@@ -14,9 +14,7 @@
 use Laravel\Lumen\Routing\Router;
 
 /** @var Router $router */
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', 'PageController@home');
 
 $router->get('log', 'GameController@log');
 $router->post('login', 'GameController@login');
